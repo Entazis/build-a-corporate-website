@@ -1,5 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .page-content {
-    padding-top: 0
+    width: 100%;
 }
 
 div.page-content > section:nth-of-type(1) {
