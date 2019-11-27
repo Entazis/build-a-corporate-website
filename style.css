@@ -7,6 +7,17 @@ body {
     height: 568px;
     position: relative;
     width: 100%;
-    background-size:cover;
+    background-size: cover;
     background: url("./img/bg-hero-desktop.png") center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 40px;
+}
+
+.primary-color {
+    color: orange;
+}
+
+.secondary-color {
+    color: white;
 }
