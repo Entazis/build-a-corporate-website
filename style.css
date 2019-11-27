@@ -3,6 +3,11 @@ body {
     padding-bottom: 50px;
 }
 
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
 .s-header {
     height: 568px;
     position: relative;
@@ -14,10 +19,18 @@ body {
     padding-bottom: 40px;
 }
 
+.s-1 {
+    padding-bottom: 20px;
+}
+
 .primary-color {
     color: orange;
 }
 
 .secondary-color {
     color: white;
+}
+
+.bg-black {
+    background: #151517;
 }
