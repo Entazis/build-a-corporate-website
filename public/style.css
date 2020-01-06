@@ -33,3 +33,7 @@ img {
 .bg-black {
     background: #151517;
 }
+
+.product-list {
+    list-style-type: none;
+}
