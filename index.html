@@ -9,6 +9,7 @@
     <meta name="keywords" content="" />
 
     <link rel="stylesheet" href="public/vendor/bootstrap-4.4.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/vendor/jquery/jquery-3.4.1.min.js" />
     <link href="public/style.css" rel="stylesheet" />
 </head>
 <body>
@@ -21,17 +22,16 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Language
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/build-a-corporate-website/en">English</a>
-                        <a class="dropdown-item" href="/build-a-corporate-website/es">Español</a>
-                    </div>
+
+            </ul>
+            <ul>
+                <li>
+                    <select id="lang">
+                        <option>English</option>
+                        <option>Portuguese</option>
+                    </select>
+                    <span data-translate="_hello">Hello</span>,
+                    <span data-translate="_january">January</span>!
                 </li>
             </ul>
         </div>
@@ -42,13 +42,17 @@
         <section class="s-header row">
             <h1 class="title col-md-6 text-center m-md-auto">IMAGE</h1>
             <div class="col-md-6 m-md-auto mt-sm-auto">
-                <h2 class="sub-title text-info">WHO WE ARE</h2>
+                <h2 class="sub-title text-info"><span data-translate="_who_we_are">WHO WE ARE</span></h2>
                 <p class="secondary-color">
-                    We are a Brazilian-Chinese trading company founded in 2003.
-                    Since our foundation, we have worked with Brazilian and Chinese entrepreneurs helping them in their activities of importing and exporting goods.
+                    <span data-translate="_we_are_a_company">
+                        We are a Brazilian-Chinese trading company founded in 2003.
+                        Since our foundation, we have worked with Brazilian and Chinese entrepreneurs helping them in their activities of importing and exporting goods.
+                    </span>
                 </p>
                 <p class="secondary-color">
-                    We have skilled personnel in Brazil and in China who are available to meet your demand for any product.
+                    <span data-translate="_we_have_skilled_personnel">
+                        We have skilled personnel in Brazil and in China who are available to meet your demand for any product.
+                    </span>
                 </p>
                 <div class="btn-block text-center">
                     <div class="btn btn-info btn-lg text-center">Primary</div>
@@ -58,12 +62,12 @@
         </section>
         <section class="s-3 row bg-light">
             <div class="col-md-6 m-auto p-4 text-center">
-                <h2 class="text-info">WHY WE ARE DIFFERENT</h2>
+                <h2 class="text-info"><span data-translate="_why_we_are_different">WHY WE ARE DIFFERENT</span></h2>
                 <p>
-                    Although, internet has improved communications globally, there are still many obstacles in the international trade: culture, language, time zone, etc., which causes insecurity and distrust.
+                    <span data-translate="_altough_internet_has_improved">Although, internet has improved communications globally, there are still many obstacles in the international trade: culture, language, time zone, etc., which causes insecurity and distrust.</span>
                 </p>
                 <p>
-                    Iton, through its professionals in Brazil and China, acts precisely to ensure the security of transactions, giving the entrepreneur the confidence to complete the business without wasting time and money.
+                    <span data-translate="_iton_through_its_professionals">Iton, through its professionals in Brazil and China, acts precisely to ensure the security of transactions, giving the entrepreneur the confidence to complete the business without wasting time and money.</span>
                 </p>
                 <div class="btn btn-info btn-lg">Primary</div>
                 <div class="btn btn-outline-info btn-lg">Secondary</div>
@@ -77,14 +81,14 @@
                 <img src="public/img/soft-lead.jpg" alt="lead image" />
             </div>
             <div class="col-md-6 m-auto p-4 text-center">
-                <h2 class="text-info">OUR PRODUCTS:</h2>
+                <h2 class="text-info"><span data-translate="_our_products">OUR PRODUCTS:</span></h2>
                 <ul style="list-style-type: none;" class="secondary-color">
-                    <li>Home Décor</li>
-                    <li>Lighting & Lighting Accessories</li>
-                    <li>Kitchen & Dining</li>
-                    <li>Storage & Organization</li>
-                    <li>Elderly care products</li>
-                    <li>Baby care products</li>
+                    <li><span data-translate="_home_decor">Home Décor</span></li>
+                    <li><span data-translate="_lighting_accessories"></span>Lighting & Lighting Accessories</li>
+                    <li><span data-translate="_kitchen_dining"></span>Kitchen & Dining</li>
+                    <li><span data-translate="_storage_organization"></span>Storage & Organization</li>
+                    <li><span data-translate="_elderly_care_products"></span>Elderly care products</li>
+                    <li><span data-translate="_baby_care_products"></span>Baby care products</li>
                 </ul>
                 <div class="btn btn-info btn-lg">Primary</div>
                 <div class="btn btn-outline-info btn-lg">Secondary</div>
@@ -92,18 +96,18 @@
         </section>
         <section class="s-5 row">
             <div class="col-md-6 m-auto p-4 text-center">
-                <h2 class="text-info">OUR SERVICES:</h2>
+                <h2 class="text-info"><span data-translate="_our_services">OUR SERVICES:</span></h2>
                 <ul style="list-style-type: none;">
-                    <li>Importing services;</li>
-                    <li>Search for suppliers or buyers for products in the international market;</li>
-                    <li>Costs of import or export;</li>
-                    <li>Survey of suppliers in accordance with the quality standards indicated by the client;</li>
-                    <li>Collection and sending of samples;</li>
-                    <li>Visit to suppliers to survey production and send reports;</li>
-                    <li>Quality survey according to specifications sent by the client with reports;</li>
-                    <li>Product loading monitoring;</li>
-                    <li>Conference of documents for import and export of products;</li>
-                    <li>Accompany client to fairs and suppliers.</li>
+                    <li><span data-translate="_importing_services"></span>Importing services;</li>
+                    <li><span data-translate="_search_for_suppliers"></span>Search for suppliers or buyers for products in the international market;</li>
+                    <li><span data-translate="_cost_of_import"></span>Costs of import or export;</li>
+                    <li><span data-translate="_survey_of_suppliers"></span>Survey of suppliers in accordance with the quality standards indicated by the client;</li>
+                    <li><span data-translate="_collection_and_sending_samples"></span>Collection and sending of samples;</li>
+                    <li><span data-translate="_visit_to_suppliers"></span>Visit to suppliers to survey production and send reports;</li>
+                    <li><span data-translate="_quality_survey"></span>Quality survey according to specifications sent by the client with reports;</li>
+                    <li><span data-translate="_product_loading"></span>Product loading monitoring;</li>
+                    <li><span data-translate="_conference_of_documents"></span>Conference of documents for import and export of products;</li>
+                    <li><span data-translate="_accompany_client"></span>Accompany client to fairs and suppliers.</li>
                 </ul>
                 <div class="btn btn-info btn-lg">Primary</div>
                 <div class="btn btn-outline-info btn-lg">Secondary</div>
@@ -114,7 +118,7 @@
         </section>
         <section class="s-6 row bg-black">
             <div class="col-md-12 m-auto p-4 text-center">
-                <h2 class="text-info ">CLIENTS</h2>
+                <h2 class="text-info"><span data-translate="_clients">CLIENTS</span></h2>
                 <img src="public/img/client1.jpg" alt="cexim" />
                 <img src="public/img/client2.jpg" alt="succespar" />
                 <img src="public/img/client3.jpg" alt="avant" />
@@ -127,7 +131,7 @@
     <div class="container-fluid text-center text-md-left">
         <div class="row">
             <div class="m-md-auto">
-                <h5 class="text-uppercase">CONTACT</h5>
+                <h5 class="text-uppercase"><span data-translate="_contact">CONTACT</span></h5>
                 <ul class="list-unstyled">
                     <li>
                         Email: <a href = "mailto: mkt@iton.com.br">mkt@iton.com.br</a>
@@ -147,5 +151,77 @@
 <script src="public/vendor/popper/popper.min.js"></script>
 <script src="public/vendor/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script>
 <script src="public/all.js"></script>
+<script>
+  $(function () {
+
+    // Lets be professional, shall we?
+    "use strict";
+
+    // Some variables for later
+    var dictionary, set_lang;
+
+    // Object literal behaving as multi-dictionary
+    dictionary = {
+      "english": {
+        "_hello": "Hello",
+        "_january": "January",
+        "_who_we_are": "WHO WE ARE",
+        "_we_are_a_company": "We are a Brazilian-Chinese trading company founded in 2003. Since our foundation, we have worked with Brazilian and Chinese entrepreneurs helping them in their activities of importing and exporting goods.",
+        "_we_have_skilled_personnel": "We have skilled personnel in Brazil and in China who are available to meet your demand for any product.",
+        "_why_we_are_different": "WHY WE ARE DIFFERENT",
+        "_altough_internet_has_improved": "Although, internet has improved communications globally, there are still many obstacles in the international trade: culture, language, time zone, etc., which causes insecurity and distrust.",
+        "_iton_through_its_professionals": "Iton, through its professionals in Brazil and China, acts precisely to ensure the security of transactions, giving the entrepreneur the confidence to complete the business without wasting time and money.",
+        "_our_products": "OUR PRODUCTS:",
+        "_home_decor": "Home Décor",
+        "_lighting_accessories": "Lighting & Lighting Accessories",
+        "_kitchen_dining": "Kitchen & Dining",
+        "_storage_organization": "Storage & Organization",
+        "_elderly_care_products": "Elderly care products",
+        "_baby_care_products": "Baby care products",
+        "_our_services": "OUR SERVICES:",
+        "_importing_services": "Importing services;",
+        "_search_for_suppliers": "Search for suppliers or buyers for products in the international market;",
+        "_cost_of_import": "Costs of import or export;",
+        "_survey_of_suppliers": "Survey of suppliers in accordance with the quality standards indicated by the client;",
+        "_collection_and_sending_samples": "Collection and sending of samples;",
+        "_visit_to_suppliers": "Visit to suppliers to survey production and send reports;",
+        "_quality_survey": "Quality survey according to specifications sent by the client with reports;",
+        "_product_loading": "Product loading monitoring;",
+        "_conference_of_documents": "Conference of documents for import and export of products;",
+        "_accompany_client": "Accompany client to fairs and suppliers.",
+        "_clients": "CLIENTS",
+        "_contact": "CONTACT"
+      },
+      "portuguese": {
+        "_hello": "Oie",
+        "_january": "Janeiro",
+        "_who_we_are": "(port)WHO WE ARE",
+        "_we_are_a_company": "(port)We are a Brazilian-Chinese trading company founded in 2003. Since our foundation, we have worked with Brazilian and Chinese entrepreneurs helping them in their activities of importing and exporting goods."
+      }
+    };
+
+    // Function for swapping dictionaries
+    set_lang = function (dictionary) {
+      $("[data-translate]").text(function () {
+        var key = $(this).data("translate");
+        if (dictionary.hasOwnProperty(key)) {
+          return dictionary[key];
+        }
+      });
+    };
+
+    // Swap languages when menu changes
+    $("#lang").on("change", function () {
+      var language = $(this).val().toLowerCase();
+      if (dictionary.hasOwnProperty(language)) {
+        set_lang(dictionary[language]);
+      }
+    });
+
+    // Set initial language to English
+    set_lang(dictionary.english);
+
+  });
+</script>
 </body>
 </html>
