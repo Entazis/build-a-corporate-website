@@ -26,12 +26,11 @@
             </ul>
             <ul>
                 <li>
+                    <label for="lang"></label>
                     <select id="lang">
                         <option>English</option>
                         <option>Portuguese</option>
                     </select>
-                    <span data-translate="_hello">Hello</span>,
-                    <span data-translate="_january">January</span>!
                 </li>
             </ul>
         </div>
@@ -153,14 +152,9 @@
 <script src="public/all.js"></script>
 <script>
   $(function () {
-
-    // Lets be professional, shall we?
     "use strict";
-
-    // Some variables for later
     var dictionary, set_lang;
 
-    // Object literal behaving as multi-dictionary
     dictionary = {
       "english": {
         "_hello": "Hello",
