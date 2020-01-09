@@ -55,6 +55,7 @@
     </nav>
 </header>
 <main>
+    <button onclick="goToTop()" id="backToTopButton" title="Go to top">Top</button>
     <div class="page-content">
         <section id="who-are-we" class="s-header row">
             <div class="title col-md-6  text-center m-md-auto">
@@ -192,11 +193,24 @@
 <script src="public/vendor/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script>
 <script src="public/all.js"></script>
 <script>
+  function goToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   $(function () {
     "use strict";
     var dictionary, set_lang;
     var slideIndex = 0;
-    showSlides();
+    var backToTopButton = document.getElementById("backToTopButton");
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    }
 
     function showSlides() {
       var i;
@@ -214,6 +228,10 @@
       dots[slideIndex-1].className += " active";
       setTimeout(showSlides, 4000); // Change image every 2 seconds
     }
+
+    window.onscroll = function() {scrollFunction()};
+
+    showSlides();
 
     dictionary = {
       "english": {
