@@ -138,18 +138,46 @@
         <section id="clients" class="s-6 row bg-black">
             <div class="col-md-12 m-auto p-4 text-center">
                 <h2 class="text-info"><span data-translate="_clients">CLIENTS</span></h2>
-                <img src="public/img/client1.jpg" alt="cexim" />
-                <img src="public/img/client2.jpg" alt="succespar" />
-                <img src="public/img/client3.jpg" alt="avant" />
-                <img src="public/img/client4.jpg" alt="vieverte" />
+                <div class="slideshow-container">
+                    <div class="mySlides fade m-auto">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="public/img/client1.jpg" alt="cexim" style="width:100%" />
+                        <div class="text">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides fade m-auto">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="public/img/client2.jpg" alt="succespar" style="width:100%" />
+                        <div class="text">Caption Two</div>
+                    </div>
+
+                    <div class="mySlides fade m-auto">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="public/img/client3.jpg" alt="avant" style="width:100%" />
+                        <div class="text">Caption Three</div>
+                    </div>
+
+                    <div class="mySlides fade m-auto">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="public/img/client4.jpg" alt="vieverte" style="width:100%" />
+                        <div class="text">Caption Four</div>
+                    </div>
+                </div>
+                <br>
+                <div class="text-center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </section>
     </div>
 </main>
 <footer class="page-footer font-small blue pt-4">
-    <div class="container-fluid text-center text-md-left">
-        <div id="contact" class="row">
-            <div class="m-md-auto">
+    <div class="container-fluid text-md-left">
+        <div id="contact" class="row text-center">
+            <div class="m-auto">
                 <h5 class="text-uppercase"><span data-translate="_contact">CONTACT</span></h5>
                 <ul class="list-unstyled">
                     <li>
@@ -173,6 +201,25 @@
   $(function () {
     "use strict";
     var dictionary, set_lang;
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
 
     dictionary = {
       "english": {
