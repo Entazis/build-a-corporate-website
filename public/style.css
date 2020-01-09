@@ -38,6 +38,10 @@ img {
     list-style-type: none;
 }
 
+.navbar-list {
+    list-style-type: none;
+}
+
 .navbar-logo {
     width: 40px;
     height: 40px;
